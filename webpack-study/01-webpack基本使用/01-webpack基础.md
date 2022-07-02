@@ -17,9 +17,9 @@ webpack是当下最热门的前端模块化管理和打包工具，它可以将�
 ### 环境配置
 
 ```shell
-mkdir webpack-demo 
+mkdir webpack-study-demo 
 npm init -y  # 初始化node目录
-npm install webpack webpack-cli --save-dev # 安装依赖 -g 全局安装
+npm install webpack-study webpack-study-cli --save-dev # 安装依赖 -g 全局安装
 ```
 
 ### 开发模块
@@ -62,7 +62,7 @@ sayHello();
 在项目的根目录下，打开终端。 
 
 ```shell
-npx webpack ../main.js --mode=development # 开发模式
+npx webpack-study ../main.js --mode=development # 开发模式
 ```
 
 打包成功！
@@ -125,7 +125,7 @@ module.exports = {
 此时我们打开终端： 
 
 ```shell
-npx webpack 
+npx webpack-study 
 ```
 
 打包结果会被输出到dist目录下。 
