@@ -17,7 +17,7 @@ module.exports = {
         path: path.resolve(__dirname, "dist")
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(), // 自动清理上次打包的dist目录
         new htmlWebpackPlugin(
             {
                 title: "Output Management"

@@ -2,4 +2,13 @@
     background-color: red;
     height: 400px;
     width: 400px;
+    background-image: url("../img/QQ20220702-152357@2x.png");
+}
+
+
+.box2 {
+    background-color: blue;
+    height: 400px;
+    width: 400px;
+    background-image: url("../img/img.png");
 }
