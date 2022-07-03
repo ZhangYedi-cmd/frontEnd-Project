@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello </h1>
+</body>
+<script src="helloEsm.js" type="module" async></script>
+<script src="sumESM.js" type="module" async></script>
+<script async>
+
+    /**
+     * defer 渲染完成后运行， 能够保证顺序
+     * async 加载完之后立刻运行，此时会阻塞dom渲染
+     * */
+
+    alert("hello")
+
+</script>
+
+</html>
