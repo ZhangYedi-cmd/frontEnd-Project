@@ -16,8 +16,36 @@
      * async 加载完之后立刻运行，此时会阻塞dom渲染
      * */
 
-    alert("hello")
+    // alert("hello")
 
+</script>
+
+<script type="module">
+    import {name} from './sum.js'
+    import {obj} from "./sum.js"
+
+    obj.name = name; // 可以对对象的属性进行赋值，但是对对象的内存地址只有读的权限
+    // obj = null ;  // 报错
+
+    console.log(name);
+
+    setTimeout(() => {
+        console.log(name);
+
+        // name = "djy"; // 没有写的权限
+    }, 600)
+
+    //  没有写的权限 ，那老子就想改写你的全局变量怎么办？？？
+    // 导出闭包函数修改
+    import {count} from "./sum.js";
+    import {addCount} from "./sum.js";
+
+    addCount()();
+    addCount()();
+    addCount()();
+    addCount()();
+
+    console.log(count);
 </script>
 
 </html>

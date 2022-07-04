@@ -5,3 +5,7 @@ exports.hello = function () {
 }
 
 exports.name = "yedi";
+
+setTimeout(() => {
+    name = "cmy"
+},500)
