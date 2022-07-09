@@ -51,6 +51,6 @@ const f3 = () => {
     })
 }
 
-f3().run((err, stat) => {
+f2().run((err, stat) => {
     console.log(stat.toJson())
 })

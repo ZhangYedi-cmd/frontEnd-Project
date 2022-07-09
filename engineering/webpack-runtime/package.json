@@ -1,14 +1,12 @@
 {
-  "name": "code-spliting",
+  "name": "webpack-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "../code-spliting/index.js",
+  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "webpack": "^5.73.0"
-  }
+  "license": "ISC"
 }
