@@ -25,20 +25,20 @@ let f1 = () => webpack({
                 use: {
                     loader: "swc-loader",
                     // loader: "babel-loader",
-                    options : swcConfig()
+                    options: swcConfig()
                 },
             },
         ]
     },
-    plugins : [
+    plugins: [
         smp
     ]
 })
 
-
-f1().run((err, stat) => {
-    // console.log(stat)
-})
+//
+// f1().run((err, stat) => {
+//     // console.log(stat)
+// })
 
 
 /** Babel */
@@ -55,3 +55,67 @@ f1().run((err, stat) => {
 //
 // SMP  ⏱  Loaders
 // swc-loader took 0.135 secs
+
+let cacheConfig = () => webpack({
+    entry: './index.js',
+    output: {
+        filename: 'main.[contenthash].js',
+        path: path.resolve(__dirname, 'dist/'),
+    },
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: "swc-loader",
+                    // loader: "babel-loader",
+                    options: swcConfig()
+                },
+            },
+        ]
+    },
+    cache: {
+        type: 'filesystem',
+        cacheDirectory: path.resolve(__dirname, '.cache'),
+        name: 'cache',
+        compression: 'gzip'
+    }
+})
+
+// cacheConfig().run(() => {
+//     console.log("build done!")
+// })
+
+
+let threadConfig = () => webpack({
+    entry: './index.js',
+    output: {
+        filename: 'main.[contenthash].js',
+        path: path.resolve(__dirname, 'dist/'),
+        clean: true
+    },
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules)/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                    },
+                    {
+                        loader: "thread-loader",
+                        options: {
+                            workers: 8,
+                        },
+                    }
+                ]
+            },
+        ]
+    },
+})
+
+threadConfig().run(() => {
+    console.log("build done!")
+})
