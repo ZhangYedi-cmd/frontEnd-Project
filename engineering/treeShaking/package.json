@@ -13,5 +13,6 @@
   },
   "devDependencies": {
     "terser-webpack-plugin": "^5.3.3"
-  }
+  },
+  "sideEffects" : false
 }
