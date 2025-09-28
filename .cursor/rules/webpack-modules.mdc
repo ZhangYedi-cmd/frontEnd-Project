@@ -1,0 +1,33 @@
+---
+globs: engineering/*/build.js,engineering/*/webpack.config.js
+description: Webpack configuration patterns and best practices
+---
+
+# Webpack Configuration Guidelines
+
+When working with webpack configurations in this project:
+
+## Common Patterns
+
+- Use `webpack()` function calls for programmatic configuration
+- Include `path.resolve(__dirname, ...)` for output paths
+- Use `contenthash` for cache busting: `filename: 'index.[contenthash].js'`
+- Enable `clean: true` for output directory cleanup
+
+## Performance Optimization
+
+- Use `TerserPlugin` for minification
+- Enable `BundleAnalyzerPlugin` for bundle size analysis
+- Configure `usedExports: true` for tree shaking
+- Use `thread-loader` for parallel processing
+
+## Module-Specific Notes
+
+- **build-volume/**: Focus on bundle analysis and size optimization
+- **treeShaking/**: Demonstrates different tree shaking configurations
+- **webpack-build-proformance/**: Shows Babel vs SWC performance comparison
+- **code-spliting/**: Implements dynamic imports and chunk splitting
+
+## Entry Points
+
+Most modules use `./index.js` as the entry point. Check the specific module's `index.js` to understand what it demonstrates.

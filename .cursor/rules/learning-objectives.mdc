@@ -1,0 +1,46 @@
+---
+alwaysApply: false
+description: Learning objectives and concepts covered in each module
+---
+
+# Learning Objectives by Module
+
+## Build Volume Analysis (`engineering/build-volume/`)
+**Learning Goals**: Bundle size optimization, cache busting, minification
+**Key Concepts**: Content hashing, Terser plugin, bundle analyzer
+**Files to Study**: [build.js](mdc:engineering/build-volume/build.js), [index.js](mdc:engineering/build-volume/index.js)
+
+## Bundless Architecture (`engineering/bundless/`)
+**Learning Goals**: Understanding bundless development, direct module loading
+**Key Concepts**: Native ES modules, import maps, no bundling workflow
+**Files to Study**: [index.html](mdc:engineering/bundless/index.html), [cjs.js](mdc:engineering/bundless/cjs.js)
+
+## CommonJS & ESM (`engineering/cjs&esm/`)
+**Learning Goals**: Module system differences, static vs dynamic loading
+**Key Concepts**: require() vs import, runtime vs compile-time loading
+**Files to Study**: [index.js](mdc:engineering/cjs&esm/index.js), [sum.js](mdc:engineering/cjs&esm/sum.js)
+
+## Code Splitting (`engineering/code-spliting/`)
+**Learning Goals**: Dynamic imports, chunk optimization, lazy loading
+**Key Concepts**: import(), webpack chunks, code splitting strategies
+**Files to Study**: [build.js](mdc:engineering/code-spliting/build.js), [index.js](mdc:engineering/code-spliting/index.js)
+
+## Custom JSON Loader (`engineering/json-loader/`)
+**Learning Goals**: Webpack loader development, custom file processing
+**Key Concepts**: Loader API, webpack loader development
+**Files to Study**: [jsonLoader.js](mdc:engineering/json-loader/jsonLoader.js), [build.js](mdc:engineering/json-loader/build.js)
+
+## Tree Shaking (`engineering/treeShaking/`)
+**Learning Goals**: Dead code elimination, bundle optimization
+**Key Concepts**: usedExports, sideEffects, static analysis
+**Files to Study**: [build.js](mdc:engineering/treeShaking/build.js), [math.js](mdc:engineering/treeShaking/math.js)
+
+## Webpack Build Performance (`engineering/webpack-build-proformance/`)
+**Learning Goals**: Build optimization, performance comparison
+**Key Concepts**: Babel vs SWC, thread-loader, build time measurement
+**Files to Study**: [build.js](mdc:engineering/webpack-build-proformance/build.js), [babel.config.js](mdc:engineering/webpack-build-proformance/babel.config.js)
+
+## Webpack Runtime (`engineering/webpack-runtime/`)
+**Learning Goals**: Understanding webpack's module system implementation
+**Key Concepts**: Module federation, webpack runtime, module loading
+**Files to Study**: [webpack.config.js](mdc:engineering/webpack-runtime/webpack.config.js), [modules/hello.js](mdc:engineering/webpack-runtime/modules/hello.js)

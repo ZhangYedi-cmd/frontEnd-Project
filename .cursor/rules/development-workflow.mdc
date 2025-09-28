@@ -1,0 +1,54 @@
+---
+globs: *.js,*.mjs,*.json
+description: Development workflow and best practices for this learning project
+---
+
+# Development Workflow
+
+## Running Modules
+
+Each engineering module is self-contained and can be run independently:
+
+```bash
+# Navigate to any module
+cd engineering/build-volume
+
+# Install dependencies (if not already done)
+npm install
+
+# Run the build script
+node build.js
+```
+
+## File Organization
+
+- **Entry Points**: Most modules use `index.js` as the main entry
+- **Build Scripts**: `build.js` contains webpack configuration
+- **Dependencies**: Each module has its own `package.json`
+- **Output**: Generated files go to `dist/` directories
+
+## Common Commands
+
+- `node build.js` - Run webpack build
+- `npm install` - Install module dependencies
+- `npm run build` - If scripts are defined (rare in this project)
+
+## Output Directories
+
+- Most builds output to `dist/` subdirectories
+- Bundle analyzer opens automatically in browser
+- Check console output for build completion messages
+
+## Debugging
+
+- Check `package.json` for module type (commonjs/esm)
+- Verify file paths in webpack configurations
+- Look for error messages in console output
+- Bundle analyzer helps visualize bundle contents
+
+## Learning Tips
+
+- Compare different module configurations side by side
+- Check the generated `dist/` files to see webpack output
+- Use browser dev tools to inspect loaded modules
+- Experiment with different webpack optimization settings

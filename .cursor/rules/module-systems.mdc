@@ -1,0 +1,38 @@
+---
+globs: engineering/cjs&esm/*.js,engineering/cjs&esm/*.mjs
+description: CommonJS and ESM module system examples
+---
+
+# Module Systems Guidelines
+
+This project demonstrates both CommonJS and ES6 module systems.
+
+## CommonJS Patterns
+
+- Use `require()` for importing modules
+- Use `module.exports` or `exports` for exporting
+- Runtime loading - modules are loaded when `require()` is called
+- Files: `helloCjs.js`, `sum.js`
+
+## ES6 Module Patterns
+
+- Use `import`/`export` syntax
+- Static loading - modules are loaded at compile time
+- Files: `helloEsm.js`, `sumESM.js`, `*.mjs` files
+
+## Key Differences
+
+- **Loading**: CommonJS is runtime, ESM is compile-time
+- **Tree Shaking**: ESM supports better tree shaking
+- **Circular Dependencies**: Check `循环导入示例/` for examples
+- **Performance**: ESM can be more efficient due to static analysis
+
+## File Extensions
+
+- `.js` files can use either system (depends on `package.json` type)
+- `.mjs` files are always treated as ES modules
+- Check `package.json` for `"type": "module"` or `"type": "commonjs"`
+
+## Circular Dependencies
+
+The `循环导入示例/` directory contains examples of circular imports in both systems.

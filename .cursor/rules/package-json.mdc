@@ -1,0 +1,43 @@
+---
+globs: **/package.json
+description: Package.json patterns and dependencies in this learning project
+---
+
+# Package.json Guidelines
+
+Each module in this project has its own `package.json` with specific dependencies for learning purposes.
+
+## Common Dependencies
+
+### Webpack Ecosystem
+- `webpack`: Core bundler
+- `webpack-bundle-analyzer`: Bundle size analysis
+- `terser-webpack-plugin`: JavaScript minification
+- `babel-loader`: Babel integration
+- `thread-loader`: Parallel processing
+
+### Build Tools
+- `rollup`: Alternative bundler
+- `@babel/core`, `@babel/preset-env`: JavaScript transpilation
+- `@swc/core`, `swc-loader`: Fast JavaScript compiler
+
+### Performance Tools
+- `speed-measure-webpack-plugin`: Build time measurement
+- `webpack-bundle-analyzer`: Bundle visualization
+
+## Module-Specific Dependencies
+
+- **build-volume/**: Bundle analysis tools
+- **rollup/**: Rollup-specific plugins
+- **webpack-build-proformance/**: Performance comparison tools
+- **json-loader/**: Custom loader development
+
+## Scripts
+
+Most modules don't have npm scripts defined. Use `node build.js` to run webpack configurations directly.
+
+## Type Field
+
+- `"type": "commonjs"` - Default for most modules
+- `"type": "module"` - For ESM-only modules
+- Check individual modules for their specific configuration

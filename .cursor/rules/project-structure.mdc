@@ -1,0 +1,35 @@
+---
+alwaysApply: true
+description: Frontend Engineering Learning Project Structure Guide
+---
+
+# Frontend Engineering Learning Project Structure
+
+This is a frontend engineering learning repository with multiple modules demonstrating different concepts.
+
+## Main Directories
+
+- **engineering/**: Core learning modules for frontend engineering concepts
+- **mini-codes/**: Small utility examples and SSR implementations
+- **node/**: Node.js code examples
+
+## Engineering Modules
+
+Each module in `engineering/` is self-contained with its own `package.json`:
+
+- **build-volume/**: Webpack bundle analysis and optimization
+- **bundless/**: Bundless development approaches
+- **cjs&esm/**: CommonJS vs ES6 modules comparison
+- **code-spliting/**: Webpack code splitting techniques
+- **json-loader/**: Custom webpack loader implementation
+- **rollup/**: Rollup bundler configuration
+- **treeShaking/**: Dead code elimination examples
+- **webpack-build-proformance/**: Build optimization techniques
+- **webpack-runtime/**: Webpack runtime behavior
+
+## Key Files
+
+- [README.md](mdc:README.md) - Main project documentation
+- Each module has a `build.js` for webpack configuration
+- `package.json` files contain module-specific dependencies
+- Entry points are typically `index.js` files
