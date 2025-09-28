@@ -1,0 +1,15 @@
+{
+  "name": "frontEnd-Project",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "engineering/*",
+    "mini-codes/*"
+  ],
+  "scripts": {
+    "bootstrap": "npm install --workspaces",
+    "build": "npm -ws --if-present run build",
+    "clean": "npm -ws --if-present run clean",
+    "test": "npm -ws --if-present test"
+  }
+}
