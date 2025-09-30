@@ -2,12 +2,12 @@
   "name": "mini-codes-ssr",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./server.js",
   "scripts": {
-    "dev": "export NODE_ENV=development && webpack && webpack -c webpack.config.server.js && node build/server.js",
-    "build": "webpack && webpack -c webpack.config.server.js"
+    "dev": "export NODE_ENV=development && node build.js && node dist/server.js",
+    "build": "node build.js`"
   },
-  "author": "shfshanyue",
+  "author": "YediZhang",
   "license": "ISC",
   "dependencies": {
     "@babel/preset-react": "^7.17.12",
